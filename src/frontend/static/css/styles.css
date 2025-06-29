@@ -1,0 +1,19 @@
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.title{
+    color: brown;
+    font-weight: bold;
+    text-align: center;
+}
+.parafo{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

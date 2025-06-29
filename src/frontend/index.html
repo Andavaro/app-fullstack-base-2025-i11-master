@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="./static/css/materialize.min.css" />
+    <link rel="stylesheet" href="./static/css/styles.css" />
+    <title>Smart Home</title>
+  </head>
+  <body>
+    <main>
+      <nav style="background-color:#124580">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo left" style="margin-left: 15px">Smart Home</a>
+          <ul id="nav-mobile" class="right" style="margin-right: 15px">
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container">
+        <br />
+        <h1 id="tit">SMART HOME WEB</h1>
+        <h3>Casa de Andrés</h3>
+
+        <div class="row">
+          <div class="input-field col s12 m12 l6 xl6" id="divLogin">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="userName" type="text" />
+                <label for="userName">Nombre de Usuario</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="userPass" type="password" />
+                <label for="userPass">Contraseña</label>
+              </div>
+              <div>
+                <p>
+                  <label>
+                    <input type="checkbox" id="cbRecor" />
+                    <span>Recordarme</span>
+                  </label>
+                </p>
+              </div>
+              <div>
+                <button id="btnLogin" class="btn-large waves-effect waves-light" type="button">
+                  Ingresar
+                  <i class="material-icons left">face</i>
+                </button>
+              </div>
+            </div>
+            <textarea id="textarea_1" class="materialize-textarea" style="height: 150px" readonly></textarea>
+          </div>
+
+          <div class="col s12 m12 l6 xl6">
+            <ul id="list" class="collection"></ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s4 m4 l2 xl2">
+            <button id="btn" class="btn waves-effect waves-light">Ingresar</button>
+            <button id="btnBuscar" class="btn waves-effect waves-light">Buscar</button>
+            <button id="btnPost" class="btn waves-effect waves-light">Ejecutar POST</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal para editar dispositivos -->
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <h4>Editar Dispositivo</h4>
+        <div class="input-field">
+          <input id="editName" type="text" class="validate" />
+          <label for="editName">Nombre</label>
+        </div>
+        <div class="input-field">
+          <input id="editDescription" type="text" class="validate" />
+          <label for="editDescription">Descripción</label>
+        </div>
+        <div class="input-field">
+          <input id="editType" type="number" class="validate" />
+          <label for="editType">Tipo</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+        <a id="btnSaveEdit" href="#!" class="waves-effect waves-light btn">Guardar</a>
+      </div>
+    </div>
+
+    <footer class="page-footer" style="background-color:#124580">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s6">
+            <h5 class="white-text">Smart Home</h5>
+            <p class="grey-text text-lighten-4">Copyright ### - 2021</p>
+          </div>
+          <div class="col l6 s6">
+            <h5 class="white-text right-align">Contact</h5>
+            <p class="white-text right-align">
+              <a class="grey-text text-lighten-3" href="!#">Email | </a>
+              <a class="grey-text text-lighten-3" href="!#">Twitter | </a>
+              <a class="grey-text text-lighten-3" href="!#">LinkedIn</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./static/js/materialize.min.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/device.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const modals = document.querySelectorAll(".modal");
+        M.Modal.init(modals);
+
+        const sliders = document.querySelectorAll("input[type=range]");
+        M.Range.init(sliders);
+      });
+    </script>
+  </body>
+</html>
